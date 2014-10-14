@@ -72,3 +72,38 @@ AC_CONFIG_FILES([
 	Makefile
 ])
 
+AC_OUTPUT
+
+dnl output configuration
+cat <<EOF
+ 
+$PACKAGE_TARNAME $PACKAGE_VERSION configuration:
+
+ - Compiler settings
+ CC: $CC
+ CXX: $CXX
+ CFLAGS: $CFLAGS
+ CPPFLAGS: $CPPFLAGS
+ CXXFLAGS: $CXXFLAGS
+ LDFLAGS: $LDFLAGS
+
+ - Path settings
+ prefix: $prefix
+ exec_prefix: $exec_prefix
+
+ bindir: $bindir
+ libdir: $libdir
+ pkglibdir: $libdir/$PACKAGE_TARNAME
+ datadir: $datadir
+
+ - Using the following binaries:
+ clasp: $CLASPPATH
+
+ - Using the following libraries:
+ Boost: $boost_major_version $BOOST_CPPFLAGS
+
+ - Options:
+ Debug: $debug_support
+ Stats: $stats_support
+
+EOF
