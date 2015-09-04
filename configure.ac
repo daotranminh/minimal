@@ -21,8 +21,8 @@ DX_HTML_FEATURE([ON])
 #DX_INIT_DOXYGEN([dmcs],[doxygen.cfg],[doc])
 
 # Checks for programs.
-AC_PROG_CXX
-AC_PROG_CC
+AC_PROG_CXX(clang++ g++)
+AC_PROG_CC(clang gcc)
 AM_PROG_LEX
 AC_PROG_YACC
 LT_INIT
